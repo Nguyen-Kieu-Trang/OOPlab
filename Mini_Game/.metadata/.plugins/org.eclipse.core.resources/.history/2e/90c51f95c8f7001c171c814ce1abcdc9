@@ -1,0 +1,12 @@
+
+public class VirtualPlayer extends Player {
+
+	public VirtualPlayer(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int getDice() {
+		return (int)(Math.random()*4) + 1;
+	}
+}

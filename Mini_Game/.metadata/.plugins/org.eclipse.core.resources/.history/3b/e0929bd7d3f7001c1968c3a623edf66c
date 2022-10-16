@@ -1,0 +1,33 @@
+import java.util.*;
+public class Player {
+	protected String name;
+	protected int score;
+	
+	
+	public Player(String name) {
+		super();
+		this.name = name;
+		score = 0;
+	}
+	
+	public int getDice() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter which dice you want to play: ");
+		int choice = sc.nextInt();
+		sc.close();
+		return choice;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+}

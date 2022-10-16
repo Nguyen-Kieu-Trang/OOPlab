@@ -1,0 +1,10 @@
+select distinct ?p ?abstract ?thumb
+where {
+       {{?p rdf:type dbo:Food.} UNION  {?p rdf:type yago:WikicatFermentedFoods.}}
+       {{?p dbo:location dbr:Vietnam.} UNION {?p dbo:country dbr:Vietnam.}}
+       ?p rdfs:comment ?abstract.
+       ?p dbo:thumbnail ?thumb.
+       FILTER ( LANG ( ?abstract ) = 'en' )
+}
+LIMIT 10000
+

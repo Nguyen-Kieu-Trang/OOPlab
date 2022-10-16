@@ -1,0 +1,10 @@
+select distinct ?p ?abstract ?thumb
+where {
+       {?p dct:subject dbc:List_of_universities_in_Vietnam.} 
+UNION {?p dct:subject dbc:Universities_in_Vietnam.}
+
+       ?p rdfs:comment ?abstract.
+       ?p dbo:thumbnail ?thumb.
+       FILTER ( LANG ( ?abstract ) = 'en' )
+}
+LIMIT 10000

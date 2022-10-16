@@ -1,0 +1,6 @@
+import java.util.ArrayList;
+
+public class Referee {
+	private ArrayList<Dice> dices = new ArrayList<>();
+	
+}

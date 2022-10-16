@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Aims {
+
+	public static void main(String[] args) {
+		ArrayList<Player> players = new ArrayList<>();
+		int numHuman;
+		String name;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Number of actual players: ");
+		numHuman = scanner.nextInt();
+		
+		
+		name = scanner.next();
+		System.out.println("Name: " + name);
+		
+		
+		for (int i = 0; i < numHuman ; i++) {
+			
+		}
+	}
+
+}

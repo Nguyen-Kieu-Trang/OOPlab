@@ -1,0 +1,47 @@
+package Dev.System;
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+import Dev.Contestant.*;
+
+public class Aims {
+
+	public static void main(String[] args) {
+		ArrayList<Player> players = new ArrayList<>();
+		int numHuman = 5;
+		String name;
+		Scanner sc = new Scanner(System.in);
+		
+		
+		while (numHuman > 4 || numHuman < 0) {
+			System.out.println("Number of actual players (0-4): ");
+			numHuman = sc.nextInt();
+			sc.nextLine();
+		}
+		
+		for (int i = 0; i < numHuman ; i++) {
+			System.out.println("Name of actual player " + (i + 1) + " : ");
+			name = sc.nextLine();
+			Human h = new Human(name);
+			players.add(h);
+		}
+		
+		for (int i = 0; i < 4 - numHuman; i++) {
+			VirtualPlayer vp = new VirtualPlayer("Bot" + (i + 1));
+			players.add(vp);
+		}
+		
+		Referee rf = new Referee(players);
+		
+		while (rf.checkEndGame() == false) {
+			rf.run();
+		}
+		
+		rf.winnerShow();
+		sc.close();
+//		for (int i = 0; i < 4; i++)
+//			System.out.println(players.get(i).getName());
+	}
+
+}

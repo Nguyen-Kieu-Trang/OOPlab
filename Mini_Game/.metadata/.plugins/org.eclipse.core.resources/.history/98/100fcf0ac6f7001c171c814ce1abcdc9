@@ -1,0 +1,8 @@
+
+public class VirtualPlayer {
+	
+	
+	public int getDice (){
+		
+	}
+}

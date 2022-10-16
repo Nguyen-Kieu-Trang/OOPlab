@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+
+public class Referee {
+	private ArrayList<Dice> dices = new ArrayList<>();
+	private ArrayList<Player> players = new ArrayList<>();
+	private int turn;
+	
+	public Referee(ArrayList<Player> players) {
+		super();
+		for (int i = 1; i <= 4; i++)
+			dices.add(new Dice(i));
+		this.players = players;
+	}
+		
+	public boolean checkEndGame() {
+		if (players.get(turn).getScore() == 21) return true;
+		return false;
+	}
+	
+	public void updateScore(int point) {
+		int totalScore = players.get(turn).getScore() + point;
+		if (totalScore > 21) totalScore = 0;
+		players.get(turn).setScore(totalScore);
+	}
+	
+	public void winnerShow () {
+		System.out.println("******WINNER******");
+		System.out.println(players.get(turn).getName());
+		System.out.println("******************");
+		for (int i = 0; i < 4; i++)
+			players.get(i).express();
+	}
+
+	public void run() {
+		
+		int point = dices.get(dice).getPoint();
+		
+		System.out.println("****************************************");
+		System.out.println("Player " + players.get(turn) + "'s turn");
+		int dice = players.get(turn).getDice();
+		System.out.println("Dice: " + dice);
+		System.out.println("Dice's output: " + point);
+		updateScore(point);
+		System.out.println("Current score: " + players.get(turn).getScore());
+		System.out.println("****************************************");
+		turn++;
+	}
+	
+	public int getTurn() {
+		return turn % 5;
+	}
+
+	public void setTurn(int turn) {
+		this.turn = turn;
+	}
+}

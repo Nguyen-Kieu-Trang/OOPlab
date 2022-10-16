@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class VirtualPlayer extends Player {
+	
+	private ArrayList<String> expressions = new ArrayList<>();
+	
+	public VirtualPlayer(String name) {
+		super(name);
+		expressions.add("Bruh Bruh :)");
+		expressions.add("Lmao Lmao XD");
+		expressions.add("GGWP!!!");
+		expressions.add("Didn't see that coming");
+		expressions.add("Over 70 years, I have never encountered this situation >(");
+		expressions.add("Luck is by your side this time");
+		expressions.add("One more round!");
+		expressions.add("I’ll get you next time!");
+		expressions.add("That was a very close game, but you were lucky this time.");
+		expressions.add("WOW! That was an amazing comeback.");
+		expressions.add("I had a great time. It’s unfortunate that I lost.");
+		expressions.add("Great Job!");
+		expressions.add("A player have disconnected...");
+		expressions.add("You were lucky there.");
+		expressions.add("Congratulations, you were the better player.");
+		expressions.add("（＞人＜；） （＞人＜；） （＞人＜；）");
+	}
+	
+	@Override
+	public String express() {
+		
+		return expressions.get((int)(Math.random()* expressions.size()));
+	}
+	
+}

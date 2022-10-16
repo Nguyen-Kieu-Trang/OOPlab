@@ -1,0 +1,13 @@
+
+public class Human extends Player{
+	
+
+	public Human(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int getDice (){
+		return (int)(Math.random()*4) + 1;
+	}
+}

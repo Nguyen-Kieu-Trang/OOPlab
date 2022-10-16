@@ -1,0 +1,27 @@
+public abstract class Player {
+	protected String name;
+	protected int score;
+	
+	
+	public Player(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public int getDice() {
+		return (int)Math.random() * 5;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Human extends Player {
+	
+	@Override
+	public int getDice() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter which dice you want to play: ");
+		int choice = sc.nextInt();
+		sc.close();
+		return choice;
+	}
+	
+	@Override
+	public void express() {
+		return;
+	}
+	
+}

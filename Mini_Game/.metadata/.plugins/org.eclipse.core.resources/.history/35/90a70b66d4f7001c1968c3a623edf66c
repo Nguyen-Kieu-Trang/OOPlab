@@ -1,0 +1,10 @@
+
+public class Aims {
+
+	public static void main(String[] args) {
+		Human h = new Human("H");
+		Player p = (Player)h;
+		p.getDice();
+	}
+
+}

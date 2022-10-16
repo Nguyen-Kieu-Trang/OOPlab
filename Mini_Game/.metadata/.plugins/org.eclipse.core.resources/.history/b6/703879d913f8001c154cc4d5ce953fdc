@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class VirtualPlayer extends Player {
+	
+	private ArrayList<String> expressions = new ArrayList<>();
+	
+	public VirtualPlayer(String name) {
+		super(name);
+		expressions.add("Bruh Bruh :)");
+		expressions.add("Lmao Lmao XD");
+		expressions.add("GGWP!!!");
+		expressions.add("Didn't see that coming");
+		expressions.add("Over 70 years, I have never encountered this situation >(");
+		expressions.add("Luck is by your side this time");
+		expressions.add("One more round");
+	}
+	
+	@Override
+	public void express() {
+		System.out.println(expressions.get((int)(Math.random()* expressions.size())));
+		return;
+	}
+	
+}

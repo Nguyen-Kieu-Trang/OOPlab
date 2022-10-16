@@ -1,0 +1,10 @@
+
+public class Aims {
+
+	public static void main(String[] args) {
+		VirtualPlayer v = new VirtualPlayer("Non");
+		System.out.println(v.express());
+
+	}
+
+}

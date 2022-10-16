@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class Referee {
+	private ArrayList<Dice> dices = new ArrayList<>();
+	private ArrayList<Player> players = new ArrayList<>();
+	
+	public Referee() {
+		super();
+		for (int i = 1; i <= 4; i++)
+			dices.add(new Dice(i));
+	}
+	
+}

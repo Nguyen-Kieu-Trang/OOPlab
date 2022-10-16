@@ -1,0 +1,8 @@
+select distinct ?p ?abstract ?thumb
+where {
+       {?p dbp:type dbr:Provinces_of_Vietnam.} UNION {?p dct:subject dbc:Cities_in_Vietnam.}
+       ?p rdfs:comment ?abstract.
+       ?p dbo:thumbnail ?thumb.
+       FILTER ( LANG ( ?abstract ) = 'en' )
+}
+LIMIT 100

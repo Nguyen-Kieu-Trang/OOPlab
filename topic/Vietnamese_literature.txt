@@ -1,0 +1,9 @@
+select distinct ?p ?abstract ?thumb
+where {
+       {?p dct:subject dbc:Vietnamese_literature.} 
+
+       ?p rdfs:comment ?abstract.
+       ?p dbo:thumbnail ?thumb.
+       FILTER ( LANG ( ?abstract ) = 'en' )
+}
+LIMIT 10000
